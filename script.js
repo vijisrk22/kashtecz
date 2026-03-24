@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ----- Fade In Animations -----
     const fadeElements = document.querySelectorAll(
-        '.stat-card, .service-card, .domain-card, .why-card, .process-step, .result-card, .tech-tag, .industry-badge'
+        '.stat-card, .service-card, .domain-card, .why-card, .process-step, .result-card, .tech-category-row, .industry-badge'
     );
 
     fadeElements.forEach(el => el.classList.add('fade-in'));
@@ -132,5 +132,69 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ----- Image Carousel -----
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const carousel = document.getElementById('heroCarousel');
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const SLIDE_INTERVAL = 5000;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+    }
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Navigation buttons
+    nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+    prevBtn.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopAutoPlay();
+            goToSlide(parseInt(dot.dataset.slide));
+            startAutoPlay();
+        });
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    carousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+    }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? nextSlide() : prevSlide();
+        }
+        startAutoPlay();
+    }, { passive: true });
+
+    // Start auto-play
+    startAutoPlay();
 
 });

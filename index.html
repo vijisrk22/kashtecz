@@ -44,8 +44,64 @@
         </div>
     </nav>
 
+    <!-- Image Carousel -->
+    <section class="carousel-section" id="home">
+        <div class="carousel" id="heroCarousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="images/carousel-1.png" alt="Strategic consulting meeting">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <span class="carousel-badge">Strategic Consulting</span>
+                        <h2>Empowering Businesses with Top-Tier Talent</h2>
+                        <p>Expert staffing solutions for Fortune 500 companies across the globe</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-2.png" alt="Technology team collaboration">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <span class="carousel-badge">IT Staffing</span>
+                        <h2>Cutting-Edge Technology Teams On Demand</h2>
+                        <p>From cloud architects to data engineers — we source the best talent</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-3.png" alt="Recruitment and hiring">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <span class="carousel-badge">Recruitment Excellence</span>
+                        <h2>Right Person. Right Role. Every Time.</h2>
+                        <p>97% first-year retention rate with our proven recruitment methodology</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-4.png" alt="Global enterprise solutions">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <span class="carousel-badge">Global Reach</span>
+                        <h2>Enterprise Solutions Across Continents</h2>
+                        <p>Offices in USA & India serving clients worldwide since 2015</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="carousel-dots" id="carouselDots">
+                <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
             <div class="hero-pattern"></div>
@@ -326,25 +382,127 @@
     </section>
 
     <!-- Technology Portfolio -->
-    <section class="tech-portfolio">
+    <section class="tech-portfolio" id="tech-portfolio">
         <div class="container">
             <h2 class="section-title">Technology Portfolio</h2>
-            <p class="section-subtitle">Our experts cover the complete spectrum of enterprise technologies</p>
-            <div class="tech-tags">
-                <span class="tech-tag">Enterprise Applications</span>
-                <span class="tech-tag">Application / Process Integration</span>
-                <span class="tech-tag">Development Platforms</span>
-                <span class="tech-tag">Testing Tools</span>
-                <span class="tech-tag">Data Warehousing</span>
-                <span class="tech-tag">Business Intelligence</span>
-                <span class="tech-tag">Enterprise Information Portal</span>
-                <span class="tech-tag">Content Management</span>
-                <span class="tech-tag">Microsoft Dynamics</span>
-                <span class="tech-tag">Infrastructure</span>
-                <span class="tech-tag">ERP / CRM / SCM</span>
-                <span class="tech-tag">Mainframe Technologies</span>
-                <span class="tech-tag">EAI</span>
-                <span class="tech-tag">Web Technologies</span>
+            <p class="section-subtitle">Our experts cover the complete spectrum of enterprise technologies — partnering with industry-leading vendors to deliver best-in-class solutions</p>
+            <div class="tech-category-grid">
+                <!-- Enterprise Applications -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <span>Enterprise Applications</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-blue">Microsoft</span>
+                        <span class="tech-brand tech-brand-red">Oracle</span>
+                        <span class="tech-brand tech-brand-blue">SAP</span>
+                    </div>
+                </div>
+
+                <!-- Application / Process Integration -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <span>Application / Process Integration</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-teal">webMethods</span>
+                        <span class="tech-brand tech-brand-blue">Vitria</span>
+                        <span class="tech-brand tech-brand-purple">Eclipse</span>
+                    </div>
+                </div>
+
+                <!-- Development Platforms / Testing Tools -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <span>Development Platforms / Testing Tools</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-blue">Intel</span>
+                        <span class="tech-brand tech-brand-navy">IBM</span>
+                        <span class="tech-brand tech-brand-red">Oracle</span>
+                        <span class="tech-brand tech-brand-orange">Lotus</span>
+                        <span class="tech-brand tech-brand-blue">Microsoft</span>
+                    </div>
+                </div>
+
+                <!-- Data Warehousing / Business Intelligence -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <span>Data Warehousing / Business Intelligence</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-blue">Cognos</span>
+                        <span class="tech-brand tech-brand-navy">SAS</span>
+                        <span class="tech-brand tech-brand-teal">Business Objects</span>
+                        <span class="tech-brand tech-brand-red">Oracle</span>
+                        <span class="tech-brand tech-brand-orange">Informatica</span>
+                    </div>
+                </div>
+
+                <!-- Enterprise Information Portal / Content Management -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <span>Enterprise Information Portal / Content Management</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-teal">Interwoven</span>
+                        <span class="tech-brand tech-brand-purple">FileNet</span>
+                        <span class="tech-brand tech-brand-green">Plumtree</span>
+                        <span class="tech-brand tech-brand-blue">Vignette</span>
+                        <span class="tech-brand tech-brand-navy">Drupal</span>
+                        <span class="tech-brand tech-brand-orange">Kentico</span>
+                        <span class="tech-brand tech-brand-blue">WordPress</span>
+                    </div>
+                </div>
+
+                <!-- Microsoft Dynamics Focus -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <span>Microsoft Dynamics Focus</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-blue">Microsoft Dynamics</span>
+                        <span class="tech-brand tech-brand-blue">Dynamics NAV</span>
+                        <span class="tech-brand tech-brand-blue">Dynamics CRM</span>
+                        <span class="tech-brand tech-brand-blue">Dynamics 365</span>
+                        <span class="tech-brand tech-brand-purple">Business Intelligence</span>
+                        <span class="tech-brand tech-brand-teal">SharePoint</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="tech-category-row">
+                    <div class="tech-category-label">
+                        <div class="tech-cat-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        </div>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="tech-brand-list">
+                        <span class="tech-brand tech-brand-navy">UNIX</span>
+                        <span class="tech-brand tech-brand-blue">Windows</span>
+                        <span class="tech-brand tech-brand-red">Citrix</span>
+                        <span class="tech-brand tech-brand-teal">VMware</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
